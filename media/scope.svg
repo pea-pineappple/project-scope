@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2">
+  <!-- 십자 렌즈: 스코프(범위/초점) 상징 -->
+  <circle cx="8" cy="8" r="5.5"/>
+  <circle cx="8" cy="8" r="1.6" fill="currentColor" stroke="none"/>
+  <path d="M8 0.5V3M8 13v2.5M0.5 8H3M13 8h2.5"/>
+</svg>

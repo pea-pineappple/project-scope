@@ -1,0 +1,391 @@
+{
+  "name": "project-scope",
+  "displayName": "Project Scope",
+  "description": "%ext.description%",
+  "version": "0.8.2",
+  "publisher": "PecuniaEstAI",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "workspaceContains:.scope",
+    "onCommand:projectScope.bootstrap"
+  ],
+  "main": "./out/extension.js",
+  "files": [
+    "out",
+    "resources",
+    "media",
+    "l10n",
+    "package.nls.json",
+    "package.nls.*.json",
+    "README.ko.md",
+    "AGENTS.md",
+    "images",
+    "LICENSE"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "project-scope",
+          "title": "Project Scope",
+          "icon": "media/scope.svg"
+        }
+      ]
+    },
+    "views": {
+      "project-scope": [
+        {
+          "id": "projectScopeExplorer",
+          "name": "Project Scope"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "projectScope.refresh",
+        "title": "%cmd.refresh%",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "projectScope.showFlow",
+        "title": "%cmd.showFlow%"
+      },
+      {
+        "command": "projectScope.showCallers",
+        "title": "%cmd.showCallers%"
+      },
+      {
+        "command": "projectScope.showGraph",
+        "title": "%cmd.showGraph%",
+        "icon": "$(type-hierarchy)"
+      },
+      {
+        "command": "projectScope.openExplorer",
+        "title": "%cmd.openExplorer%",
+        "icon": "$(window)"
+      },
+      {
+        "command": "projectScope.copyMermaid",
+        "title": "%cmd.copyMermaid%",
+        "icon": "$(copy)"
+      },
+      {
+        "command": "projectScope.showSummary",
+        "title": "%cmd.showSummary%"
+      },
+      {
+        "command": "projectScope.bootstrap",
+        "title": "%cmd.bootstrap%",
+        "icon": "$(save)"
+      },
+      {
+        "command": "projectScope.analyze",
+        "title": "%cmd.analyze%",
+        "icon": "$(sparkle)"
+      },
+      {
+        "command": "projectScope.openExplorerHere",
+        "title": "%cmd.openExplorerHere%",
+        "icon": "$(type-hierarchy)"
+      },
+      {
+        "command": "projectScope.selectEngine",
+        "title": "%cmd.selectEngine%",
+        "icon": "$(gear)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "projectScope.analyze",
+          "when": "view == projectScopeExplorer",
+          "group": "navigation@1"
+        },
+        {
+          "command": "projectScope.refresh",
+          "when": "view == projectScopeExplorer",
+          "group": "navigation@2"
+        },
+        {
+          "command": "projectScope.openExplorer",
+          "when": "view == projectScopeExplorer",
+          "group": "navigation@0"
+        },
+        {
+          "command": "projectScope.bootstrap",
+          "when": "view == projectScopeExplorer",
+          "group": "navigation@3"
+        },
+        {
+          "command": "projectScope.selectEngine",
+          "when": "view == projectScopeExplorer",
+          "group": "1_engine@1"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "projectScope.showGraph",
+          "when": "view == projectScopeExplorer && viewItem =~ /^scope(SymbolFunc|SymbolClass|CallFunc)$/",
+          "group": "inline"
+        },
+        {
+          "command": "projectScope.showGraph",
+          "when": "view == projectScopeExplorer && viewItem =~ /^scope(SymbolFunc|SymbolClass|CallFunc)$/",
+          "group": "navigation@1"
+        },
+        {
+          "command": "projectScope.showFlow",
+          "when": "view == projectScopeExplorer && viewItem =~ /^scope(SymbolFunc|CallFunc)$/",
+          "group": "navigation@2"
+        },
+        {
+          "command": "projectScope.showCallers",
+          "when": "view == projectScopeExplorer && viewItem =~ /^scope(SymbolFunc|CallFunc)$/",
+          "group": "navigation@3"
+        },
+        {
+          "command": "projectScope.copyMermaid",
+          "when": "view == projectScopeExplorer && viewItem =~ /^scope(SymbolFunc|CallFunc)$/",
+          "group": "9_copy@1"
+        },
+        {
+          "command": "projectScope.showSummary",
+          "when": "view == projectScopeExplorer && viewItem =~ /^scope(SymbolFunc|SymbolClass|CallFunc)$/",
+          "group": "navigation@4"
+        },
+        {
+          "command": "projectScope.analyze",
+          "when": "view == projectScopeExplorer && viewItem =~ /^scopeSymbol(Func|Class)$/",
+          "group": "navigation@5"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "projectScope.showGraph",
+          "when": "resourceScheme == file && projectScope.hasRecords",
+          "group": "navigation@90"
+        },
+        {
+          "command": "projectScope.analyze",
+          "when": "resourceScheme == file && projectScope.hasRecords",
+          "group": "navigation@91"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "projectScope.openExplorerHere",
+          "when": "resourceScheme == file && projectScope.hasRecords",
+          "group": "navigation@90"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "projectScope.openExplorerHere",
+          "when": "projectScope.hasRecords"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Project Scope",
+      "properties": {
+        "projectScope.jsonlPath": {
+          "type": "string",
+          "default": ".scope/analysis.jsonl",
+          "description": "%cfg.jsonlPath%"
+        },
+        "projectScope.callTreeMaxDepth": {
+          "type": "number",
+          "default": 6,
+          "minimum": 1,
+          "maximum": 20,
+          "description": "%cfg.callTreeMaxDepth%"
+        },
+        "projectScope.graphDepth": {
+          "type": "number",
+          "default": 3,
+          "minimum": 1,
+          "maximum": 4,
+          "description": "%cfg.graphDepth%"
+        },
+        "projectScope.graphOpenIn": {
+          "type": "string",
+          "enum": [
+            "window",
+            "beside",
+            "active"
+          ],
+          "enumDescriptions": [
+            "%cfg.graphOpenIn.window%",
+            "%cfg.graphOpenIn.beside%",
+            "%cfg.graphOpenIn.active%"
+          ],
+          "default": "window",
+          "description": "%cfg.graphOpenIn%"
+        },
+        "projectScope.analyzer": {
+          "type": "string",
+          "enum": [
+            "claude-cli",
+            "codex-cli",
+            "gemini-cli",
+            "opencode",
+            "vscode-lm",
+            "ollama",
+            "off"
+          ],
+          "enumDescriptions": [
+            "%cfg.analyzer.claude%",
+            "%cfg.analyzer.codex%",
+            "%cfg.analyzer.gemini%",
+            "%cfg.analyzer.opencode%",
+            "%cfg.analyzer.vscodelm%",
+            "%cfg.analyzer.ollama%",
+            "%cfg.analyzer.off%"
+          ],
+          "default": "claude-cli",
+          "description": "%cfg.analyzer%"
+        },
+        "projectScope.claudePath": {
+          "type": "string",
+          "default": "claude",
+          "description": "%cfg.claudePath%"
+        },
+        "projectScope.codexPath": {
+          "type": "string",
+          "default": "codex",
+          "description": "%cfg.codexPath%"
+        },
+        "projectScope.geminiPath": {
+          "type": "string",
+          "default": "gemini",
+          "description": "%cfg.geminiPath%"
+        },
+        "projectScope.opencodePath": {
+          "type": "string",
+          "default": "opencode",
+          "description": "%cfg.opencodePath%"
+        },
+        "projectScope.ollamaUrl": {
+          "type": "string",
+          "default": "http://127.0.0.1:11434",
+          "description": "%cfg.ollamaUrl%"
+        },
+        "projectScope.analyzeModel": {
+          "type": "string",
+          "default": "sonnet",
+          "description": "%cfg.analyzeModel%"
+        },
+        "projectScope.summaryLanguage": {
+          "type": "string",
+          "enum": [
+            "ask",
+            "ui",
+            "auto",
+            "en",
+            "ko",
+            "ja",
+            "zh-cn",
+            "zh-tw"
+          ],
+          "enumDescriptions": [
+            "%cfg.summaryLanguage.ask%",
+            "%cfg.summaryLanguage.ui%",
+            "%cfg.summaryLanguage.auto%",
+            "English",
+            "한국어",
+            "日本語",
+            "简体中文",
+            "繁體中文"
+          ],
+          "default": "ask",
+          "description": "%cfg.summaryLanguage%"
+        },
+        "projectScope.autoAnalyze": {
+          "type": "string",
+          "enum": [
+            "off",
+            "onClick",
+            "onSave"
+          ],
+          "enumDescriptions": [
+            "%cfg.autoAnalyze.off%",
+            "%cfg.autoAnalyze.onClick%",
+            "%cfg.autoAnalyze.onSave%"
+          ],
+          "default": "off",
+          "description": "%cfg.autoAnalyze%"
+        },
+        "projectScope.autoAnalyzeMaxPerHour": {
+          "type": "number",
+          "default": 60,
+          "minimum": 1,
+          "description": "%cfg.autoAnalyzeMaxPerHour%"
+        },
+        "projectScope.scanOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "%cfg.scanOnSave%"
+        },
+        "projectScope.scanOnStartup": {
+          "type": "boolean",
+          "default": true,
+          "description": "%cfg.scanOnStartup%"
+        },
+        "projectScope.gitIntegration": {
+          "type": "boolean",
+          "default": true,
+          "description": "%cfg.gitIntegration%"
+        },
+        "projectScope.openExplorerOnStartup": {
+          "type": "boolean",
+          "default": false,
+          "description": "%cfg.openExplorerOnStartup%"
+        },
+        "projectScope.scanInclude": {
+          "type": "string",
+          "default": "",
+          "description": "%cfg.scanInclude%"
+        },
+        "projectScope.scanExclude": {
+          "type": "string",
+          "default": "**/{node_modules,out,dist,build,target,bin,obj,.git,.scope,test,tests,__tests__,spec,fixtures,vendor,third_party}/**",
+          "description": "%cfg.scanExclude%"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "node esbuild.js",
+    "typecheck": "tsc --noEmit",
+    "watch": "node esbuild.js --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.90.0",
+    "@vscode/vsce": "^4.0.0",
+    "esbuild": "^0.20.2",
+    "tm-grammars": "^1.32.22",
+    "tm-themes": "^1.12.12",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "vscode-oniguruma": "^2.0.1",
+    "vscode-textmate": "^9.3.2"
+  },
+  "l10n": "./l10n",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pea-pineappple/project-scope.git"
+  },
+  "homepage": "https://github.com/pea-pineappple/project-scope",
+  "bugs": {
+    "url": "https://github.com/pea-pineappple/project-scope/issues"
+  }
+}

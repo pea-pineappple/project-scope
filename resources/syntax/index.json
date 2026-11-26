@@ -1,0 +1,399 @@
+{
+ "languages": {
+  "typescript": "typescript",
+  "typescriptreact": "tsx",
+  "javascript": "javascript",
+  "javascriptreact": "jsx",
+  "python": "python",
+  "csharp": "csharp",
+  "cpp": "cpp",
+  "c": "c",
+  "cuda": "cpp",
+  "rust": "rust",
+  "go": "go",
+  "java": "java",
+  "kotlin": "kotlin",
+  "swift": "swift",
+  "scala": "scala",
+  "dart": "dart",
+  "php": "php",
+  "ruby": "ruby",
+  "lua": "lua",
+  "sql": "sql",
+  "shellscript": "shellscript",
+  "json": "json",
+  "jsonc": "jsonc",
+  "yaml": "yaml"
+ },
+ "grammars": {
+  "source.ts": {
+   "file": "typescript.json",
+   "name": "typescript",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/210541906e5a96ab39f9c753f921b1bd35f4138b/extensions/typescript-basics/syntaxes/TypeScript.tmLanguage.json"
+  },
+  "source.tsx": {
+   "file": "tsx.json",
+   "name": "tsx",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/210541906e5a96ab39f9c753f921b1bd35f4138b/extensions/typescript-basics/syntaxes/TypeScriptReact.tmLanguage.json"
+  },
+  "source.js": {
+   "file": "javascript.json",
+   "name": "javascript",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/210541906e5a96ab39f9c753f921b1bd35f4138b/extensions/javascript/syntaxes/JavaScript.tmLanguage.json"
+  },
+  "source.js.jsx": {
+   "file": "jsx.json",
+   "name": "jsx",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/210541906e5a96ab39f9c753f921b1bd35f4138b/extensions/javascript/syntaxes/JavaScriptReact.tmLanguage.json"
+  },
+  "source.python": {
+   "file": "python.json",
+   "name": "python",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/cf4c9e469d521fa5f33353737e8157eb0789ad02/extensions/python/syntaxes/MagicPython.tmLanguage.json"
+  },
+  "source.cs": {
+   "file": "csharp.json",
+   "name": "csharp",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/af600487b1e94374d9f48f57cbf2cad24656b07f/extensions/csharp/syntaxes/csharp.tmLanguage.json"
+  },
+  "source.cpp": {
+   "file": "cpp.json",
+   "name": "cpp",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/8623a79836fba2e7e058e3493345ee068d28ce4f/extensions/cpp/syntaxes/cpp.tmLanguage.json"
+  },
+  "source.c": {
+   "file": "c.json",
+   "name": "c",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/bd1abe08c38bb5deccf65610f8f3c03d2338d20d/extensions/cpp/syntaxes/c.tmLanguage.json"
+  },
+  "source.rust": {
+   "file": "rust.json",
+   "name": "rust",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/af600487b1e94374d9f48f57cbf2cad24656b07f/extensions/rust/syntaxes/rust.tmLanguage.json"
+  },
+  "source.go": {
+   "file": "go.json",
+   "name": "go",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/091ef378baaa141c8bc4bbe9775d4cb3bd655a80/extensions/go/syntaxes/go.tmLanguage.json"
+  },
+  "source.java": {
+   "file": "java.json",
+   "name": "java",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/3c86ede5f554f6e196c832394e126b291a1de606/extensions/java/syntaxes/java.tmLanguage.json"
+  },
+  "source.kotlin": {
+   "file": "kotlin.json",
+   "name": "kotlin",
+   "license": "MIT",
+   "source": "https://github.com/fwcd/vscode-kotlin/blob/626e20d5c51a4379c4c0ee293aa89e58b5232aec/syntaxes/kotlin.tmLanguage.json"
+  },
+  "source.swift": {
+   "file": "swift.json",
+   "name": "swift",
+   "license": "MIT",
+   "source": "https://github.com/jtbandes/swift-tmlanguage/blob/2be007b6bc88e54a0edfd3c313ff31276edc923d/Swift.tmLanguage.yaml"
+  },
+  "source.scala": {
+   "file": "scala.json",
+   "name": "scala",
+   "license": "MIT",
+   "source": "https://github.com/scala/vscode-scala-syntax/blob/672fa16c64e12b2cc8b98da011411463968de727/syntaxes/Scala.tmLanguage.json"
+  },
+  "source.dart": {
+   "file": "dart.json",
+   "name": "dart",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/af600487b1e94374d9f48f57cbf2cad24656b07f/extensions/dart/syntaxes/dart.tmLanguage.json"
+  },
+  "source.php": {
+   "file": "php.json",
+   "name": "php",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/af600487b1e94374d9f48f57cbf2cad24656b07f/extensions/php/syntaxes/php.tmLanguage.json"
+  },
+  "source.ruby": {
+   "file": "ruby.json",
+   "name": "ruby",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/af600487b1e94374d9f48f57cbf2cad24656b07f/extensions/ruby/syntaxes/ruby.tmLanguage.json"
+  },
+  "source.lua": {
+   "file": "lua.json",
+   "name": "lua",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/c8fdd1650c06321d687ddfd1eff06aae4b616256/extensions/lua/syntaxes/lua.tmLanguage.json"
+  },
+  "source.sql": {
+   "file": "sql.json",
+   "name": "sql",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/af600487b1e94374d9f48f57cbf2cad24656b07f/extensions/sql/syntaxes/sql.tmLanguage.json"
+  },
+  "source.shell": {
+   "file": "shellscript.json",
+   "name": "shellscript",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/9473445f7d3dcb5c579f42ece8b6c18c43c63ed3/extensions/shellscript/syntaxes/shell-unix-bash.tmLanguage.json"
+  },
+  "source.json": {
+   "file": "json.json",
+   "name": "json",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/d6af4893ed9a3545163a4cb748fa5548bd1e51a5/extensions/json/syntaxes/JSON.tmLanguage.json"
+  },
+  "source.json.comments": {
+   "file": "jsonc.json",
+   "name": "jsonc",
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/0adddd82816db666c52038e8277312dc55da2756/extensions/json/syntaxes/JSONC.tmLanguage.json"
+  },
+  "source.yaml": {
+   "file": "yaml.json",
+   "name": "yaml",
+   "source": "https://github.com/textmate/yaml.tmbundle/blob/e54ceae3b719506dba7e481a77cea4a8b576ae46/Syntaxes/YAML.tmLanguage"
+  },
+  "source.regexp.python": {
+   "file": "regexp.json",
+   "name": "regexp",
+   "license": "MIT",
+   "source": "https://github.com/MagicStack/MagicPython/blob/c9b3409deb69acec31bbf7913830e93a046b30cc/grammars/MagicRegExp.tmLanguage"
+  },
+  "source.glsl": {
+   "file": "glsl.json",
+   "name": "glsl",
+   "source": "https://github.com/polym0rph/GLSL.tmbundle/blob/6998d3bbd204e26746a5ca580cda4c650b9057b1/Syntaxes/GLSL.tmLanguage"
+  }
+ },
+ "themes": {
+  "dark-plus": {
+   "file": "dark-plus.json",
+   "type": "dark",
+   "labels": [
+    "Default Dark Modern",
+    "Default Dark+",
+    "Dark+",
+    "Dark Modern",
+    "Dark+ (default dark)",
+    "Visual Studio Dark",
+    "Default High Contrast",
+    "Dark High Contrast"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/e061feef09c2a09a59d0a88ab186aa880b3c56c3/extensions/theme-defaults/themes/dark_plus.json"
+  },
+  "light-plus": {
+   "file": "light-plus.json",
+   "type": "light",
+   "labels": [
+    "Default Light Modern",
+    "Default Light+",
+    "Light+",
+    "Light Modern",
+    "Light+ (default light)",
+    "Visual Studio Light",
+    "Default High Contrast Light",
+    "Light High Contrast"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/09fe3fcbc1514bc35742dc4325d05b7d7adfcad2/extensions/theme-defaults/themes/light_plus.json"
+  },
+  "monokai": {
+   "file": "monokai.json",
+   "type": "dark",
+   "labels": [
+    "Monokai",
+    "Monokai Dimmed"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/e886f3e07de31233c89ecdba812b05bfd07616d7/extensions/theme-monokai/themes/monokai-color-theme.json"
+  },
+  "solarized-dark": {
+   "file": "solarized-dark.json",
+   "type": "dark",
+   "labels": [
+    "Solarized Dark"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/e886f3e07de31233c89ecdba812b05bfd07616d7/extensions/theme-solarized-dark/themes/solarized-dark-color-theme.json"
+  },
+  "solarized-light": {
+   "file": "solarized-light.json",
+   "type": "light",
+   "labels": [
+    "Solarized Light"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/0132168df99ab8830a1eb158b1a5e8242f3e94ff/extensions/theme-solarized-light/themes/solarized-light-color-theme.json"
+  },
+  "github-dark": {
+   "file": "github-dark.json",
+   "type": "dark",
+   "labels": [
+    "GitHub Dark"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/primer/github-vscode-theme/blob/f7a67d67fc2302a0ec36ddfb7bdd57142f4575e8/src/theme.js"
+  },
+  "github-light": {
+   "file": "github-light.json",
+   "type": "light",
+   "labels": [
+    "GitHub Light"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/primer/github-vscode-theme/blob/f7a67d67fc2302a0ec36ddfb7bdd57142f4575e8/src/theme.js"
+  },
+  "github-dark-default": {
+   "file": "github-dark-default.json",
+   "type": "dark",
+   "labels": [
+    "GitHub Dark Default"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/primer/github-vscode-theme/blob/f7a67d67fc2302a0ec36ddfb7bdd57142f4575e8/src/theme.js"
+  },
+  "github-light-default": {
+   "file": "github-light-default.json",
+   "type": "light",
+   "labels": [
+    "GitHub Light Default"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/primer/github-vscode-theme/blob/f7a67d67fc2302a0ec36ddfb7bdd57142f4575e8/src/theme.js"
+  },
+  "github-dark-dimmed": {
+   "file": "github-dark-dimmed.json",
+   "type": "dark",
+   "labels": [
+    "GitHub Dark Dimmed"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/primer/github-vscode-theme/blob/f7a67d67fc2302a0ec36ddfb7bdd57142f4575e8/src/theme.js"
+  },
+  "one-dark-pro": {
+   "file": "one-dark-pro.json",
+   "type": "dark",
+   "labels": [
+    "One Dark Pro",
+    "One Dark Pro Darker",
+    "One Dark Pro Flat",
+    "One Dark Pro Mix"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/Binaryify/OneDark-Pro/blob/194ac088df050c97ff0dd64f8a6a38221d2971ca/themes/OneDark-Pro.json"
+  },
+  "dracula": {
+   "file": "dracula.json",
+   "type": "dark",
+   "labels": [
+    "Dracula",
+    "Dracula Theme",
+    "Dracula Soft"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/dracula/visual-studio-code/blob/61743d6ea21cde34d9ad1009ec784ffe6f5e457c/src/dracula.yml"
+  },
+  "nord": {
+   "file": "nord.json",
+   "type": "dark",
+   "labels": [
+    "Nord"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/arcticicestudio/nord-visual-studio-code/blob/27045851c5154fe2d9b116e7491c596cdcd72275/themes/nord-color-theme.json"
+  },
+  "tokyo-night": {
+   "file": "tokyo-night.json",
+   "type": "dark",
+   "labels": [
+    "Tokyo Night",
+    "Tokyo Night Storm"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/enkia/tokyo-night-vscode-theme/blob/da5546bc4163a02a30d6f3ced90d4ef7dfcb8460/themes/tokyo-night-color-theme.json"
+  },
+  "red": {
+   "file": "red.json",
+   "type": "dark",
+   "labels": [
+    "Red"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/microsoft/vscode/blob/e886f3e07de31233c89ecdba812b05bfd07616d7/extensions/theme-red/themes/Red-color-theme.json"
+  },
+  "night-owl": {
+   "file": "night-owl.json",
+   "type": "dark",
+   "labels": [
+    "Night Owl"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/sdras/night-owl-vscode-theme/blob/d298950d6378c36c027f1387e307ebf3f145fc90/themes/Night%20Owl-color-theme.json"
+  },
+  "catppuccin-mocha": {
+   "file": "catppuccin-mocha.json",
+   "type": "dark",
+   "labels": [
+    "Catppuccin Mocha"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/catppuccin/vscode/blob/befc9e6fc41980f4241408f7049755d47c06ff45/packages/catppuccin-vsc/package.json"
+  },
+  "catppuccin-latte": {
+   "file": "catppuccin-latte.json",
+   "type": "light",
+   "labels": [
+    "Catppuccin Latte"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/catppuccin/vscode/blob/befc9e6fc41980f4241408f7049755d47c06ff45/packages/catppuccin-vsc/package.json"
+  },
+  "material-theme": {
+   "file": "material-theme.json",
+   "type": "dark",
+   "labels": [
+    "Material Theme"
+   ],
+   "license": "Apache-2.0",
+   "source": "https://github.com/antfu/vsc-material-theme/blob/f09de7a2970defaed43d8e293b4d3ac4e350e71b/src/material.theme.config.ts"
+  },
+  "material-theme-darker": {
+   "file": "material-theme-darker.json",
+   "type": "dark",
+   "labels": [
+    "Material Theme Darker"
+   ],
+   "license": "Apache-2.0",
+   "source": "https://github.com/antfu/vsc-material-theme/blob/f09de7a2970defaed43d8e293b4d3ac4e350e71b/src/material.theme.config.ts"
+  },
+  "ayu-dark": {
+   "file": "ayu-dark.json",
+   "type": "dark",
+   "labels": [
+    "Ayu Dark"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/ayu-theme/vscode-ayu/blob/97f28cd3c392cb12672a25229f33c4dd420f96ea/ayu-dark.json"
+  },
+  "ayu-light": {
+   "file": "ayu-light.json",
+   "type": "light",
+   "labels": [
+    "Ayu Light"
+   ],
+   "license": "MIT",
+   "source": "https://github.com/ayu-theme/vscode-ayu/blob/97f28cd3c392cb12672a25229f33c4dd420f96ea/ayu-light.json"
+  }
+ }
+}
